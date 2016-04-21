@@ -1,0 +1,27 @@
+[
+ {
+    "vcName": "WBHomeViewController",
+    "title": "首页",
+    "image": "tabbar_home",
+    "highlightImage" : "tabbar_home_highlighted"
+ 
+ },
+ {
+     "vcName": "WBMessageViewController",
+     "title": "消息",
+    "image": "tabbar_message_center",
+    "highlightImage" : "tabbar_message_center_highlighted"
+ },
+ {
+     "vcName": "WBPlaygroundViewController",
+     "title": "广场",
+    "image": "tabbar_discover",
+    "highlightImage" : "tabbar_discover_highlighted"
+ },
+ {
+     "vcName": "WBProfileViewController",
+     "title": "我",
+    "image": "tabbar_profile",
+    "highlightImage" : "tabbar_profile_highlighted"
+ }
+ ]
