@@ -14,12 +14,39 @@ class WBTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // 设置图片和字体的颜色统一为橙色
-        tabBar.tintColor = UIColor(red: 233.0/255, green: 117.0/255, blue: 0, alpha: 1)
-        
+         tabBar.tintColor = UIColor(red: 233.0/255, green: 117.0/255, blue: 0, alpha: 1)
+        // 加载JSON文件数据动态创建控制器
         loadJsonFile()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // 添加加号按钮
+        setUpPlusBtn()
+        
+    }
+    
+    private func setUpPlusBtn() {
+        let W = UIScreen.mainScreen().bounds.size.width * 0.2
+        let H = tabBar.bounds.size.height
+        let X = 2 * W
+        let Y = CGFloat(0)
+        
+        let plusBtn = UIButton(frame: CGRect(x: X, y: Y, width: W, height: H))
+        plusBtn .setImage(UIImage(named: "tabbar_compose_icon_add"), forState: UIControlState.Normal)
+        plusBtn .setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
+        plusBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: UIControlState.Normal)
+        plusBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
+        tabBar.addSubview(plusBtn)
+        
+        plusBtn.addTarget(self, action: #selector(plusBtnOnClick), forControlEvents: UIControlEvents.TouchUpInside)
     }
 
-    // 加载JSON文件数据动态创建控制器
+    func plusBtnOnClick()  {
+        print("plusBtnOnClick")
+    }
+    
     func loadJsonFile()  {
         let filePath = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)
         let data = NSData(contentsOfFile: filePath!)
@@ -44,6 +71,7 @@ class WBTabBarViewController: UITabBarController {
                 // 创建子控制器
                 addChildViewController("WBHomeViewController", title: "首页", image: "tabbar_home", selectedImage: "tabbar_home_highlighted")
                 addChildViewController("WBMessageViewController", title: "消息", image: "tabbar_message_center", selectedImage: "tabbar_message_center_highlighted")
+                addChildViewController("WBNULLViewController", title: "", image: "", selectedImage: "")
                 addChildViewController("WBPlaygroundViewController", title: "广场", image: "tabbar_discover", selectedImage: "tabbar_discover_highlighted")
                 addChildViewController("WBProfileViewController", title: "个人 ", image: "tabbar_profile", selectedImage: "tabbar_profile_highlighted")
                 

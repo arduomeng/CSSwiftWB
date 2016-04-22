@@ -1,14 +1,14 @@
 //
-//  WBMessageViewController.swift
+//  WBNULLViewController.swift
 //  SwiftCSWB
 //
-//  Created by Apple on 16/4/21.
+//  Created by Apple on 16/4/22.
 //  Copyright © 2016年 Apple. All rights reserved.
 //
 
 import UIKit
 
-class WBMessageViewController: UIViewController {
+class WBNULLViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

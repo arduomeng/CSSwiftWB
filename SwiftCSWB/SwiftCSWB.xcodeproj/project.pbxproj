@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1D92791CC9C56F005671B0 /* WBNULLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */; };
 		0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE818A1CC85E1C002642DA /* AppDelegate.swift */; };
 		0BAE81961CC85E1C002642DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE818B1CC85E1C002642DA /* Info.plist */; };
 		0BAE819C1CC862AF002642DA /* WBTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE819B1CC862AF002642DA /* WBTabBarViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNULLViewController.swift; sourceTree = "<group>"; };
 		0BAE818A1CC85E1C002642DA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAE818B1CC85E1C002642DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BAE819B1CC862AF002642DA /* WBTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTabBarViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				0BAE819B1CC862AF002642DA /* WBTabBarViewController.swift */,
 				0BAE819D1CC86D86002642DA /* WBNavigationController.swift */,
+				0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1D92791CC9C56F005671B0 /* WBNULLViewController.swift in Sources */,
 				0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */,
 				0BAE819C1CC862AF002642DA /* WBTabBarViewController.swift in Sources */,
 				0BAE81A41CC86EBF002642DA /* WBPlaygroundViewController.swift in Sources */,

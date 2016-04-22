@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TabBarItem
 //        var item = UITabBarItem.appearance();
 //    
-//        var attr = NSMutableDictionary.dictionaryWithValuesForKeys()
+//        var attr = NSMutableDictionary()
 //        attr[NSFontAttributeName] = UIFont.systemFontOfSize(14)
 //        attr[NSForegroundColorAttributeName] = UIColor.grayColor()
 //    
@@ -36,12 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        attr2[NSFontAttributeName] = UIFont.systemFontOfSize(14)
 //        attr2[NSForegroundColorAttributeName] = UIColor.redColor()
 //        
-//        item.setTitleTextAttributes(attr, forState: <#T##UIControlState#>)
-//        
-//        [item setTitleTextAttributes:attr forState:UIControlStateNormal];
-//        [item setTitleTextAttributes:attr2 forState:UIControlStateSelected];
-//        
-//        // NavigationBar appearanceWhenContainedIn方法含义，设置BDJNavigationController的通用设置.其他的导航栏不会影响
+//        item.setTitleTextAttributes(attr as! [String : AnyObject], forState: UIControlState.Normal)
+//        item.setTitleTextAttributes(attr2 as! [String : AnyObject], forState: UIControlState.Highlighted)
+        
+        
+        // NavigationBar appearanceWhenContainedIn方法含义，设置BDJNavigationController的通用设置.其他的导航栏不会影响
 //        UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[BDJNavigationController class], nil];
 //        
 //        NSMutableDictionary *attrNav = [[NSMutableDictionary alloc] init];

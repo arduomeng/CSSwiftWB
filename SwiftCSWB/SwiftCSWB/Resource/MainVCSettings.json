@@ -7,10 +7,16 @@
  
  },
  {
-     "vcName": "WBMessageViewController",
-     "title": "消息",
-    "image": "tabbar_message_center",
-    "highlightImage" : "tabbar_message_center_highlighted"
+ "vcName": "WBMessageViewController",
+ "title": "消息",
+ "image": "tabbar_message_center",
+ "highlightImage" : "tabbar_message_center_highlighted"
+ },
+ {
+ "vcName": "WBNULLViewController",
+ "title": "",
+ "image": "",
+ "highlightImage" : ""
  },
  {
      "vcName": "WBPlaygroundViewController",
