@@ -40,7 +40,7 @@ class WBTabBarViewController: UITabBarController {
         plusBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
         tabBar.addSubview(plusBtn)
         
-        plusBtn.addTarget(self, action: #selector(plusBtnOnClick), forControlEvents: UIControlEvents.TouchUpInside)
+        plusBtn.addTarget(self, action: "plusBtnOnClick", forControlEvents: UIControlEvents.TouchUpInside)
     }
 
     func plusBtnOnClick()  {
@@ -79,10 +79,6 @@ class WBTabBarViewController: UITabBarController {
             
             
         }
-        
-        
-        
-        print()
     }
     
     // 动态获取命名空间， 根据字符串创建类 Swift中类名为 命名空间.类名

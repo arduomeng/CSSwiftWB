@@ -20,10 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = WBTabBarViewController()
         window?.makeKeyAndVisible()
         
+        setUpNavTabBar()
+        
         return true;
     }
 
     func setUpNavTabBar (){
+        
+        UIBarButtonItem.appearance().tintColor = UIColor.orangeColor()
         
         // TabBarItem
 //        var item = UITabBarItem.appearance();

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030494311CCC6105009A513B /* WBMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304942F1CCC6105009A513B /* WBMenuViewController.swift */; };
+		030494341CCC8D5F009A513B /* WBPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030494331CCC8D5F009A513B /* WBPresentationController.swift */; };
+		0304F6621CCB827200657D28 /* WBNavBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */; };
+		0307CFDC1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */; };
+		030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */; };
+		030D4D7F1CCCB29800027511 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7E1CCCB29800027511 /* Constant.swift */; };
+		030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */; };
+		031A58D01CCB4866002E228E /* WBLoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */; };
+		031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */; };
+		031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */; };
+		039747D81CCA584F0059DF73 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039747D71CCA584F0059DF73 /* WBBaseViewController.swift */; };
+		039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039F50461CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift */; };
+		03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03ADCDA41CCD075E00EA9118 /* Home.storyboard */; };
 		0B1D92791CC9C56F005671B0 /* WBNULLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */; };
 		0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE818A1CC85E1C002642DA /* AppDelegate.swift */; };
 		0BAE81961CC85E1C002642DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE818B1CC85E1C002642DA /* Info.plist */; };
@@ -40,6 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0304942F1CCC6105009A513B /* WBMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMenuViewController.swift; sourceTree = "<group>"; };
+		030494331CCC8D5F009A513B /* WBPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPresentationController.swift; sourceTree = "<group>"; };
+		0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavBarTitleView.swift; sourceTree = "<group>"; };
+		0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRCodeCardViewController.swift; sourceTree = "<group>"; };
+		030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTransitioningDelegate.swift; sourceTree = "<group>"; };
+		030D4D7E1CCCB29800027511 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRcodeViewController.swift; sourceTree = "<group>"; };
+		031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginRegisterView.swift; sourceTree = "<group>"; };
+		031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBLoginRegisterView.xib; sourceTree = "<group>"; };
+		031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		039747D71CCA584F0059DF73 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
+		039F50461CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		03ADCDA41CCD075E00EA9118 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNULLViewController.swift; sourceTree = "<group>"; };
 		0BAE818A1CC85E1C002642DA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAE818B1CC85E1C002642DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,9 +111,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030D4D7D1CCCB28400027511 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				030D4D7E1CCCB29800027511 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		031A58D31CCB53CD002E228E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		03ADCDA31CCD074B00EA9118 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				03ADCDA41CCD075E00EA9118 /* Home.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		0BAE817C1CC85E1C002642DA /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				030D4D7D1CCCB28400027511 /* Constant */,
 				0BAE81971CC8627C002642DA /* Main */,
 				0BAE81811CC85E1C002642DA /* Home */,
 				0BAE81851CC85E1C002642DA /* Message */,
@@ -103,6 +154,7 @@
 		0BAE817D1CC85E1C002642DA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				031A58D31CCB53CD002E228E /* Category */,
 				0BAE817E1CC85E1C002642DA /* C */,
 				0BAE817F1CC85E1C002642DA /* M */,
 				0BAE81801CC85E1C002642DA /* V */,
@@ -145,6 +197,11 @@
 			isa = PBXGroup;
 			children = (
 				0BAE819F1CC86E73002642DA /* WBHomeViewController.swift */,
+				030494331CCC8D5F009A513B /* WBPresentationController.swift */,
+				039F50461CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift */,
+				030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */,
+				030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */,
+				0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -159,6 +216,8 @@
 		0BAE81841CC85E1C002642DA /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */,
+				0304942F1CCC6105009A513B /* WBMenuViewController.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -291,6 +350,7 @@
 				0BAE819B1CC862AF002642DA /* WBTabBarViewController.swift */,
 				0BAE819D1CC86D86002642DA /* WBNavigationController.swift */,
 				0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */,
+				039747D71CCA584F0059DF73 /* WBBaseViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -305,6 +365,8 @@
 		0BAE819A1CC8627C002642DA /* V */ = {
 			isa = PBXGroup;
 			children = (
+				031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */,
+				031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -342,6 +404,7 @@
 			children = (
 				0BAE81A71CC88EE7002642DA /* Resource */,
 				0BAE817C1CC85E1C002642DA /* Class */,
+				03ADCDA31CCD074B00EA9118 /* Storyboard */,
 				0BBF8F541CC71B17005209F4 /* Assets.xcassets */,
 			);
 			path = SwiftCSWB;
@@ -434,6 +497,7 @@
 				TargetAttributes = {
 					0BBF8F491CC71B17005209F4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 8RSWW685EX;
 					};
 					0BBF8F5D1CC71B18005209F4 = {
 						CreatedOnToolsVersion = 7.3;
@@ -470,8 +534,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */,
 				0BBF8F551CC71B17005209F4 /* Assets.xcassets in Resources */,
 				0BAE81961CC85E1C002642DA /* Info.plist in Resources */,
+				031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */,
 				0BAE81A91CC88EE7002642DA /* MainVCSettings.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,14 +563,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030494341CCC8D5F009A513B /* WBPresentationController.swift in Sources */,
+				030D4D7F1CCCB29800027511 /* Constant.swift in Sources */,
 				0B1D92791CC9C56F005671B0 /* WBNULLViewController.swift in Sources */,
+				039747D81CCA584F0059DF73 /* WBBaseViewController.swift in Sources */,
+				0304F6621CCB827200657D28 /* WBNavBarTitleView.swift in Sources */,
 				0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */,
+				030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */,
 				0BAE819C1CC862AF002642DA /* WBTabBarViewController.swift in Sources */,
 				0BAE81A41CC86EBF002642DA /* WBPlaygroundViewController.swift in Sources */,
+				030494311CCC6105009A513B /* WBMenuViewController.swift in Sources */,
+				031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */,
+				039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */,
 				0BAE81A21CC86E97002642DA /* WBMessageViewController.swift in Sources */,
+				0307CFDC1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift in Sources */,
+				031A58D01CCB4866002E228E /* WBLoginRegisterView.swift in Sources */,
 				0BAE81A61CC86EC8002642DA /* WBProfileViewController.swift in Sources */,
 				0BAE81A01CC86E73002642DA /* WBHomeViewController.swift in Sources */,
 				0BAE819E1CC86D86002642DA /* WBNavigationController.swift in Sources */,
+				030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,11 +705,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCSWB/Class/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcs.www.SwiftCSWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58d3e3c8-ef79-4250-99ac-aa6d090fb841";
 			};
 			name = Debug;
 		};
@@ -641,11 +721,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCSWB/Class/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcs.www.SwiftCSWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "58d3e3c8-ef79-4250-99ac-aa6d090fb841";
 			};
 			name = Release;
 		};
