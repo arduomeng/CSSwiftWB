@@ -10,7 +10,7 @@ import UIKit
 
 class WBBaseViewController: UIViewController, WBLoginRegisterViewDelegate {
 
-    var isLogin = false;
+    var isLogin : Bool?
 
     lazy var loginRegisterView:WBLoginRegisterView = {
         let lrView = NSBundle.mainBundle().loadNibNamed("WBLoginRegisterView", owner: nil, options: nil).last as! WBLoginRegisterView
@@ -23,10 +23,21 @@ class WBBaseViewController: UIViewController, WBLoginRegisterViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        isLogin = isLoginAndValid()
+    }
+    
+    // 判断是非登陆，且没有过期
+    func isLoginAndValid() -> Bool{
+        let account = WBOAuthAccountTool.shareOAuthAccountTool().loadAccount()
+        print(account)
+        if (account != nil)  && (account?.expiresDate?.compare(NSDate()) == NSComparisonResult.OrderedDescending){
+            return true
+        }
+        return false
     }
     
     func loginRegisterView(image: String, isPlayground: Bool){
-        if !isLogin {
+        if isLogin == false {
             view.addSubview(self.loginRegisterView)
             
             // 设置delegate
@@ -48,10 +59,13 @@ class WBBaseViewController: UIViewController, WBLoginRegisterViewDelegate {
     
     // MARK: -WBLoginRegisterViewDelegate
     func WBLoginRegisterViewOnClickLoginBtn() {
-        print("login")
+        // OAuth授权登录
+        let OAuthVC = WBOAuthViewController()
+        let OAuthNav = UINavigationController(rootViewController: OAuthVC)
+        self.presentViewController(OAuthNav, animated: true, completion: nil)
     }
     func WBLoginRegisterViewOnClickRegisterBtn() {
-        print("register")
+        
     }
 
 }
