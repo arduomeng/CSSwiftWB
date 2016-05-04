@@ -10,16 +10,16 @@ import UIKit
 import AFNetworking
 
 
-class WBNetworkOAuthTool: AFHTTPSessionManager {
+class WBNetworkTool: AFHTTPSessionManager {
     
-    static let networkTool : WBNetworkOAuthTool = {
+    static let networkTool : WBNetworkTool = {
         let URL = NSURL(string: "https://api.weibo.com/")
-        let network = WBNetworkOAuthTool(baseURL: URL)
+        let network = WBNetworkTool(baseURL: URL)
         return network
     }()
     
     // 创建一个单利
-    class func shareNetworkOAuthTool () -> WBNetworkOAuthTool {
+    class func shareNetworkOAuthTool () -> WBNetworkTool {
         return networkTool
     }
 }

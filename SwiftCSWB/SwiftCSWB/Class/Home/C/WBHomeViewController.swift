@@ -8,8 +8,20 @@
 
 import UIKit
 
+
+
 class WBHomeViewController: WBBaseViewController {
 
+    let reusedID : String = "cell"
+    
+    var mainTableView : UITableView?
+    
+    var statusArr : [WBStatus]? {
+        didSet{
+            mainTableView?.reloadData()
+        }
+    }
+    
     // titleView
     lazy var titleView : WBNavBarTitleView = {
         return WBNavBarTitleView()
@@ -22,17 +34,34 @@ class WBHomeViewController: WBBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.redColor()
         
         setUpNavBar()
         
+        setUpTableView()
+        
         // 监听menuView的dismiss
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didObserverMenuViewDismiss", name: dismissMenuView, object: nil)
+        
+        let isLogin : Bool = loginRegisterView("visitordiscover_feed_image_house", isPlayground: false)
+        
+        if isLogin{
+            WBStatus.loadNewStatuses({ (dateArr, error) -> () in
+                if error != nil {
+                    print(error)
+                    return
+                }
+                self.statusArr = dateArr
+            })
+        }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        loginRegisterView("visitordiscover_feed_image_house", isPlayground: false)
     }
     
     func didObserverMenuViewDismiss(){
@@ -47,6 +76,17 @@ class WBHomeViewController: WBBaseViewController {
         navigationItem.titleView = titleView
         titleView.setTitle("安人多梦", forState: UIControlState.Normal)
         titleView.addTarget(self, action: "btnOnClick", forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func setUpTableView(){
+        let rect = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height)
+        let tableView = UITableView(frame: rect)
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: reusedID)
+        tableView.delegate = self
+        tableView.dataSource = self
+        view.addSubview(tableView)
+        
+        mainTableView = tableView
     }
     
     // 注意 事件响应函数不能用private 修饰。因为事件响应是通过runloop监听的，设置私有后runloop找不到该方法
@@ -80,6 +120,22 @@ class WBHomeViewController: WBBaseViewController {
         presentViewController(QRcodeNavVC, animated: true, completion: nil)
     }
 
+}
+
+extension WBHomeViewController : UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statusArr?.count ?? 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCellWithIdentifier(reusedID)
+        
+        // 因为能来到该代理方法，则statusArr?.count一定不为零，即statusArr一定有值
+        cell?.textLabel?.text = statusArr![indexPath.row].text
+        
+        return cell!
+    }
 }
 
 

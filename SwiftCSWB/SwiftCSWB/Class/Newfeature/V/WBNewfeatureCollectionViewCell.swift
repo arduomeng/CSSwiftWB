@@ -10,6 +10,10 @@ import UIKit
 
 class WBNewfeatureCollectionViewCell: UICollectionViewCell {
     
+    deinit{
+        print("newfeature")
+    }
+    
     lazy var imageView : UIImageView = {
        let image = UIImageView()
         image.frame = self.bounds
@@ -40,7 +44,8 @@ class WBNewfeatureCollectionViewCell: UICollectionViewCell {
     }
     
     func welcomeBtnOnClick(){
-        print("---")
+        // 发送通知，告诉appdelegate 切换控制器
+        NSNotificationCenter.defaultCenter().postNotificationName(switchViewController, object: nil)
     }
     
     func startAnimation(){

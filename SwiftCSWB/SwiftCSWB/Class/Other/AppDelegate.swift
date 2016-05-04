@@ -17,12 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = WBNewfeatureCollectionViewController()
+        window?.rootViewController = isNewfeature()
         window?.makeKeyAndVisible()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeViewController", name: switchViewController, object: nil)
         
         setUpNavTabBar()
         
         return true;
+    }
+    
+    func changeViewController(){
+        window?.rootViewController = WBTabBarViewController()
+        print(window?.rootViewController)
+        
+    }
+    
+    private func isNewfeature() -> UIViewController{
+        
+        let currnetVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        let localVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
+        
+        if currnetVersion.compare(localVersion) == NSComparisonResult.OrderedDescending{
+            NSUserDefaults.standardUserDefaults().setObject(currnetVersion, forKey: "CFBundleShortVersionString")
+            return WBNewfeatureCollectionViewController()
+        }
+        return WBTabBarViewController()
+        
     }
 
     func setUpNavTabBar (){

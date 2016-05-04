@@ -8,7 +8,8 @@
 
 import Foundation
 // 通知名
-let dismissMenuView = "dismissMenuView"
+let dismissMenuView = "dismissMenuView" as String
+let switchViewController = "switchViewController" as String;
 // OAuth授权
 let client_id = "2733386379"
 let redirect_uri = "http://www.baidu.com"

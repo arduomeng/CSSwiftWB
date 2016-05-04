@@ -12,13 +12,13 @@ class WBPlaygroundViewController: WBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.purpleColor()
+        
+        loginRegisterView("visitordiscover_feed_image_smallicon", isPlayground: true)
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        loginRegisterView("visitordiscover_feed_image_smallicon", isPlayground: true)
     }
     
 

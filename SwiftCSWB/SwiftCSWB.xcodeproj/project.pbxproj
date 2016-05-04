@@ -10,11 +10,13 @@
 		030494311CCC6105009A513B /* WBMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304942F1CCC6105009A513B /* WBMenuViewController.swift */; };
 		030494341CCC8D5F009A513B /* WBPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030494331CCC8D5F009A513B /* WBPresentationController.swift */; };
 		0304F6621CCB827200657D28 /* WBNavBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */; };
-		0306E3761CD44B840021604C /* WBNetworkOAuthTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306E3751CD44B840021604C /* WBNetworkOAuthTool.swift */; };
+		0306E3761CD44B840021604C /* WBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306E3751CD44B840021604C /* WBNetworkTool.swift */; };
 		0307CFDC1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */; };
 		030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */; };
 		030D4D7F1CCCB29800027511 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7E1CCCB29800027511 /* Constant.swift */; };
 		030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */; };
+		0310D29C1CDA1F36002D8124 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D29B1CDA1F36002D8124 /* WBStatus.swift */; };
+		0310D29E1CDA4402002D8124 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D29D1CDA4402002D8124 /* WBUser.swift */; };
 		031A58D01CCB4866002E228E /* WBLoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */; };
 		031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */; };
 		031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */; };
@@ -63,11 +65,13 @@
 		0304942F1CCC6105009A513B /* WBMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMenuViewController.swift; sourceTree = "<group>"; };
 		030494331CCC8D5F009A513B /* WBPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPresentationController.swift; sourceTree = "<group>"; };
 		0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavBarTitleView.swift; sourceTree = "<group>"; };
-		0306E3751CD44B840021604C /* WBNetworkOAuthTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkOAuthTool.swift; sourceTree = "<group>"; };
+		0306E3751CD44B840021604C /* WBNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkTool.swift; sourceTree = "<group>"; };
 		0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRCodeCardViewController.swift; sourceTree = "<group>"; };
 		030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTransitioningDelegate.swift; sourceTree = "<group>"; };
 		030D4D7E1CCCB29800027511 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRcodeViewController.swift; sourceTree = "<group>"; };
+		0310D29B1CDA1F36002D8124 /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
+		0310D29D1CDA4402002D8124 /* WBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
 		031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginRegisterView.swift; sourceTree = "<group>"; };
 		031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBLoginRegisterView.xib; sourceTree = "<group>"; };
 		031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 		0BAE81831CC85E1C002642DA /* M */ = {
 			isa = PBXGroup;
 			children = (
+				0310D29B1CDA1F36002D8124 /* WBStatus.swift */,
+				0310D29D1CDA4402002D8124 /* WBUser.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -415,7 +421,7 @@
 		0BAE81941CC85E1C002642DA /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				0306E3751CD44B840021604C /* WBNetworkOAuthTool.swift */,
+				0306E3751CD44B840021604C /* WBNetworkTool.swift */,
 				03C85A4B1CD4A78500CC1FAA /* WBOAuthAccountTool.swift */,
 			);
 			path = Tool;
@@ -726,6 +732,7 @@
 				039747D81CCA584F0059DF73 /* WBBaseViewController.swift in Sources */,
 				0304F6621CCB827200657D28 /* WBNavBarTitleView.swift in Sources */,
 				0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */,
+				0310D29E1CDA4402002D8124 /* WBUser.swift in Sources */,
 				030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */,
 				0BAE819C1CC862AF002642DA /* WBTabBarViewController.swift in Sources */,
 				0BAE81A41CC86EBF002642DA /* WBPlaygroundViewController.swift in Sources */,
@@ -743,7 +750,8 @@
 				0BAE819E1CC86D86002642DA /* WBNavigationController.swift in Sources */,
 				03C85A4C1CD4A78500CC1FAA /* WBOAuthAccountTool.swift in Sources */,
 				030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */,
-				0306E3761CD44B840021604C /* WBNetworkOAuthTool.swift in Sources */,
+				0306E3761CD44B840021604C /* WBNetworkTool.swift in Sources */,
+				0310D29C1CDA1F36002D8124 /* WBStatus.swift in Sources */,
 				032450861CD457E700B9C8E8 /* WBOAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

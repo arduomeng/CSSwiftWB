@@ -12,13 +12,13 @@ class WBProfileViewController: WBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor.purpleColor()
+        loginRegisterView("visitordiscover_image_profile", isPlayground: false)
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        loginRegisterView("visitordiscover_image_profile", isPlayground: false)
     }
     
 

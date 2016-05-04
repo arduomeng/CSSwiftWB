@@ -11,6 +11,11 @@ import SVProgressHUD
 
 class WBOAuthViewController: UIViewController {
 
+    
+    deinit{
+        print("oauth deinit")
+    }
+    
     lazy var webview : UIWebView = {
         let webView = UIWebView()
         webView.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
@@ -61,7 +66,7 @@ extension WBOAuthViewController : UIWebViewDelegate{
     func AccessToken(code : String){
         
         
-        let networkOAuth = WBNetworkOAuthTool.shareNetworkOAuthTool()
+        let networkOAuth = WBNetworkTool.shareNetworkOAuthTool()
         let path = "oauth2/access_token"
         var params = [String : AnyObject]()
         params["client_id"] = client_id
@@ -79,13 +84,12 @@ extension WBOAuthViewController : UIWebViewDelegate{
                 print(error)
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
         
     }
     
     func getUserInfo(JSON : [String : AnyObject]){
         let accountJSON = JSON
-        let networkOAuth = WBNetworkOAuthTool.shareNetworkOAuthTool()
+        let networkOAuth = WBNetworkTool.shareNetworkOAuthTool()
         let path = "2/users/show.json"
         var params = [String : AnyObject]()
         params["access_token"] = JSON["access_token"]
@@ -102,7 +106,12 @@ extension WBOAuthViewController : UIWebViewDelegate{
             }
             // 归档操作
             WBOAuthAccountTool.shareOAuthAccountTool().saveAccount(OAuthAccount)
-            print(OAuthAccount)
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            // 发送通知，让appdelegate切换控制器
+            NSNotificationCenter.defaultCenter().postNotificationName(switchViewController, object: nil)
+            
+            
             
             }) { (_, error) -> Void in
                 print(error)
@@ -115,5 +124,6 @@ extension WBOAuthViewController : UIWebViewDelegate{
     func webViewDidFinishLoad(webView: UIWebView) {
         SVProgressHUD.dismiss()
     }
+    
     
 }

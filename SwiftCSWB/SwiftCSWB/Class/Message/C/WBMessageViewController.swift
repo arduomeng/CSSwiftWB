@@ -12,12 +12,13 @@ class WBMessageViewController: WBBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.purpleColor()
+        
+        loginRegisterView("visitordiscover_image_message", isPlayground: false)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        loginRegisterView("visitordiscover_image_message", isPlayground: false)
     }
 
 }

@@ -29,14 +29,14 @@ class WBBaseViewController: UIViewController, WBLoginRegisterViewDelegate {
     // 判断是非登陆，且没有过期
     func isLoginAndValid() -> Bool{
         let account = WBOAuthAccountTool.shareOAuthAccountTool().loadAccount()
-        print(account)
         if (account != nil)  && (account?.expiresDate?.compare(NSDate()) == NSComparisonResult.OrderedDescending){
+
             return true
         }
         return false
     }
     
-    func loginRegisterView(image: String, isPlayground: Bool){
+    func loginRegisterView(image: String, isPlayground: Bool) -> Bool{
         if isLogin == false {
             view.addSubview(self.loginRegisterView)
             
@@ -54,7 +54,9 @@ class WBBaseViewController: UIViewController, WBLoginRegisterViewDelegate {
                 loginRegisterView.imageView.layer.addAnimation(animation, forKey: nil)
                 
             }
+            return false
         }
+        return true
     }
     
     // MARK: -WBLoginRegisterViewDelegate

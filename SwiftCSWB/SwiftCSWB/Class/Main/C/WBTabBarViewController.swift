@@ -10,6 +10,10 @@ import UIKit
 
 class WBTabBarViewController: UITabBarController {
 
+    deinit{
+        print("tabbar deinit")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,5 +108,7 @@ class WBTabBarViewController: UITabBarController {
         let nav = WBNavigationController(rootViewController: childVC)
         self.addChildViewController(nav)
     }
+    
+    
 
 }
