@@ -9,6 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let temp = "temp"
 
 class WBNewfeatureCollectionViewController: UICollectionViewController {
 
