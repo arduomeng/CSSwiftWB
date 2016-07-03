@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpNavTabBar()
         
+        // 打印程序路径
+        let path = NSHomeDirectory()
+        CSprint(path)
+        
         return true;
     }
     
@@ -35,7 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func isNewfeature() -> UIViewController{
         
+        // as! 强制类型转换，转换失败则发生运行时错误 子类可以强制转换成父类，父类不能强制转换成子类
         let currnetVersion = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String
+        // as? 若转换失败，则返回nil 不会报错 
+        // ?? a ?? b 中的 ?? 就是是空值合并运算符，会对 a 进行判断，如果不为 nil 则解包，否则就返回 b
+        //    1.a 必须是 optional 的
+        //    2.b 必须和 a 类型一致
         let localVersion = NSUserDefaults.standardUserDefaults().objectForKey("CFBundleShortVersionString") as? String ?? ""
         
         if currnetVersion.compare(localVersion) == NSComparisonResult.OrderedDescending{
@@ -75,6 +84,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        navBar.titleTextAttributes = attrNav;
 //        [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     }
+    
+    
+    
 
 }
 

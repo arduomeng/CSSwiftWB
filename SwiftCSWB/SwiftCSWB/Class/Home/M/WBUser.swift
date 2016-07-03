@@ -8,12 +8,18 @@
 
 import UIKit
 
-class WBUser: NSObject {
 
+
+class WBUser: NSObject {
+ 
     var id : NSNumber?
     var screen_name : String?
     var profile_image_url : String?
-    
+    // -1 未认证 0 认证用户 2.3.5 认证企业 220 达人
+    var verified_type = 0;
+    // 会员
+    var mbrank = 0;
+    var mbtype = 0;
     /*
     "allow_all_act_msg" = 1;
     "allow_all_comment" = 1;
@@ -84,7 +90,7 @@ class WBUser: NSObject {
     }
     
     override var description: String {
-        let keys : [String] = ["id", "screen_name", "profile_image_url"]
+        let keys : [String] = ["id", "screen_name", "profile_image_url", "verified_type", "mbrank", "mbtype"]
         let dict = dictionaryWithValuesForKeys(keys)
         
         return ("\(dict)")

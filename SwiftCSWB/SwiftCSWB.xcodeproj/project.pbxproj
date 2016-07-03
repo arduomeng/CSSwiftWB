@@ -20,11 +20,18 @@
 		031A58D01CCB4866002E228E /* WBLoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */; };
 		031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */; };
 		031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */; };
+		031EB27B1D2945040029A46D /* WBHomeForwordCellBg.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031EB27A1D2945040029A46D /* WBHomeForwordCellBg.xib */; };
+		031EB27D1D29459B0029A46D /* WBHomeForwordCellBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031EB27C1D29459B0029A46D /* WBHomeForwordCellBg.swift */; };
 		032450861CD457E700B9C8E8 /* WBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032450831CD457E700B9C8E8 /* WBOAuthViewController.swift */; };
 		032450881CD4580300B9C8E8 /* WBOAuthAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032450871CD4580300B9C8E8 /* WBOAuthAccount.swift */; };
+		033378991D28F92400703A42 /* WBHomePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033378981D28F92400703A42 /* WBHomePicCell.xib */; };
+		0333789B1D28F98D00703A42 /* WBHomePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333789A1D28F98D00703A42 /* WBHomePicCell.swift */; };
+		0369C0C01D26712000151016 /* WBHomeStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0369C0BE1D26712000151016 /* WBHomeStatusTableViewCell.swift */; };
+		0369C0C11D26712000151016 /* WBHomeStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0369C0BF1D26712000151016 /* WBHomeStatusTableViewCell.xib */; };
 		039747D81CCA584F0059DF73 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039747D71CCA584F0059DF73 /* WBBaseViewController.swift */; };
 		039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039F50461CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift */; };
 		03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03ADCDA41CCD075E00EA9118 /* Home.storyboard */; };
+		03C342BB1D26CA65003205D4 /* NSDate+Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C342BA1D26CA65003205D4 /* NSDate+Calculate.swift */; };
 		03C85A4C1CD4A78500CC1FAA /* WBOAuthAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A4B1CD4A78500CC1FAA /* WBOAuthAccountTool.swift */; };
 		03C85A521CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A511CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift */; };
 		03C85A541CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A531CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift */; };
@@ -75,11 +82,18 @@
 		031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginRegisterView.swift; sourceTree = "<group>"; };
 		031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBLoginRegisterView.xib; sourceTree = "<group>"; };
 		031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
+		031EB27A1D2945040029A46D /* WBHomeForwordCellBg.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBHomeForwordCellBg.xib; sourceTree = "<group>"; };
+		031EB27C1D29459B0029A46D /* WBHomeForwordCellBg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeForwordCellBg.swift; sourceTree = "<group>"; };
 		032450831CD457E700B9C8E8 /* WBOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthViewController.swift; sourceTree = "<group>"; };
 		032450871CD4580300B9C8E8 /* WBOAuthAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthAccount.swift; sourceTree = "<group>"; };
+		033378981D28F92400703A42 /* WBHomePicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBHomePicCell.xib; sourceTree = "<group>"; };
+		0333789A1D28F98D00703A42 /* WBHomePicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomePicCell.swift; sourceTree = "<group>"; };
+		0369C0BE1D26712000151016 /* WBHomeStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeStatusTableViewCell.swift; sourceTree = "<group>"; };
+		0369C0BF1D26712000151016 /* WBHomeStatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBHomeStatusTableViewCell.xib; sourceTree = "<group>"; };
 		039747D71CCA584F0059DF73 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
 		039F50461CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		03ADCDA41CCD075E00EA9118 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		03C342BA1D26CA65003205D4 /* NSDate+Calculate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Calculate.swift"; sourceTree = "<group>"; };
 		03C85A4B1CD4A78500CC1FAA /* WBOAuthAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthAccountTool.swift; sourceTree = "<group>"; };
 		03C85A511CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		03C85A531CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewfeatureCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -154,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */,
+				03C342BA1D26CA65003205D4 /* NSDate+Calculate.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -309,6 +324,12 @@
 			children = (
 				0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */,
 				0304942F1CCC6105009A513B /* WBMenuViewController.swift */,
+				0369C0BE1D26712000151016 /* WBHomeStatusTableViewCell.swift */,
+				0369C0BF1D26712000151016 /* WBHomeStatusTableViewCell.xib */,
+				0333789A1D28F98D00703A42 /* WBHomePicCell.swift */,
+				033378981D28F92400703A42 /* WBHomePicCell.xib */,
+				031EB27A1D2945040029A46D /* WBHomeForwordCellBg.xib */,
+				031EB27C1D29459B0029A46D /* WBHomeForwordCellBg.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -652,8 +673,11 @@
 				03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */,
 				0BBF8F551CC71B17005209F4 /* Assets.xcassets in Resources */,
 				0BAE81961CC85E1C002642DA /* Info.plist in Resources */,
+				031EB27B1D2945040029A46D /* WBHomeForwordCellBg.xib in Resources */,
 				031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */,
 				0BAE81A91CC88EE7002642DA /* MainVCSettings.json in Resources */,
+				033378991D28F92400703A42 /* WBHomePicCell.xib in Resources */,
+				0369C0C11D26712000151016 /* WBHomeStatusTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,10 +760,14 @@
 				030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */,
 				0BAE819C1CC862AF002642DA /* WBTabBarViewController.swift in Sources */,
 				0BAE81A41CC86EBF002642DA /* WBPlaygroundViewController.swift in Sources */,
+				0333789B1D28F98D00703A42 /* WBHomePicCell.swift in Sources */,
 				030494311CCC6105009A513B /* WBMenuViewController.swift in Sources */,
+				0369C0C01D26712000151016 /* WBHomeStatusTableViewCell.swift in Sources */,
 				032450881CD4580300B9C8E8 /* WBOAuthAccount.swift in Sources */,
 				031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */,
+				031EB27D1D29459B0029A46D /* WBHomeForwordCellBg.swift in Sources */,
 				039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */,
+				03C342BB1D26CA65003205D4 /* NSDate+Calculate.swift in Sources */,
 				0BAE81A21CC86E97002642DA /* WBMessageViewController.swift in Sources */,
 				03C85A541CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift in Sources */,
 				0307CFDC1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift in Sources */,
@@ -882,6 +910,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCSWB/Class/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcs.www.SwiftCSWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "58d3e3c8-ef79-4250-99ac-aa6d090fb841";
@@ -899,6 +928,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftCSWB/Class/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lcs.www.SwiftCSWB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "58d3e3c8-ef79-4250-99ac-aa6d090fb841";
