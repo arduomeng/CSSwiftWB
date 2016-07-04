@@ -10,6 +10,8 @@ import UIKit
 import SDWebImage
 class WBStatus: NSObject{
     
+    var idstr : String?
+    
     // 重写时间的getter方法
     
     var _created_at : String?
@@ -185,8 +187,6 @@ class WBStatus: NSObject{
     // 配图cell的itemSize
     var picItemSize : CGSize?
     
-    
-    
     init(dict : [String : AnyObject]){
         super.init()
     
@@ -221,13 +221,20 @@ class WBStatus: NSObject{
         
         return ("\(dict)")
     }
-    
-    // 获取微博数据
-    class func loadNewStatuses(finished : (dateArr : [WBStatus]?, error : NSError?) -> ()){
+    /**
+     获取微博数据
+     
+     - parameter since_id: 下拉返回比since_id值大的微博
+     - parameter max_id: 上拉返回比max_id值小的微博
+     - parameter finished: 数据加载完成的回调闭包
+     */
+    class func loadNewStatuses(max_id : String, since_id : String, finished : (dateArr : [WBStatus]?, error : NSError?) -> ()){
         let URL = "2/statuses/home_timeline.json"
         var params = [String : AnyObject]()
         if let account : WBOAuthAccount? = WBOAuthAccountTool.shareOAuthAccountTool().loadAccount(){
             params["access_token"] = account?.access_token
+            params["since_id"] = since_id
+            params["max_id"] = max_id
         }
         WBNetworkTool.shareNetworkOAuthTool().GET(URL, parameters: params, success: { (_, response) -> Void in
             
@@ -302,16 +309,29 @@ class WBStatus: NSObject{
                 
                 picY = CGFloat(iconH + (5 * cellMargin)) + forwordTextH  + textH
                 
-                let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: picY, width: image.size.width * 2, height: image.size.height * 2)
+                if image != nil {
+                    let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: picY, width: image.size.width * 2, height: image.size.height * 2)
+                    
+                    return (picRect, CGSize(width: image.size.width * 2, height: image.size.height * 2), CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: picsW, height: image.size.height * 2 + forwordTextH + CGFloat(3 * cellMargin)))
+                }else{
+                    
+                    return (CGRectZero, CGSizeZero, CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: picsW, height:forwordTextH + CGFloat(3 * cellMargin)))
+                }
                 
-                return (picRect, CGSize(width: image.size.width * 2, height: image.size.height * 2), CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: picsW, height: image.size.height * 2 + forwordTextH + CGFloat(3 * cellMargin)))
             }else{
                 
                 picY = CGFloat(iconH + (3 * cellMargin)) + textH
                 
-                let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: picY, width: image.size.width * 2, height: image.size.height * 2)
+                if image != nil {
+                    let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: picY, width: image.size.width * 2, height: image.size.height * 2)
+                    
+                    return (picRect, CGSize(width: image.size.width * 2, height: image.size.height * 2), CGRectZero)
+                }else{
+                    
+                    return (CGRectZero, CGSizeZero, CGRectZero)
+                }
                 
-                return (picRect, CGSize(width: image.size.width * 2, height: image.size.height * 2), CGRectZero)
+               
             }
         }else if pic_urls?.count == 4{
             
@@ -346,56 +366,7 @@ class WBStatus: NSObject{
                 return (picRect, CGSize(width: itemW, height: itemH), CGRectZero)
             }
             
-            
-            
-            
         }
     }
     
-    
-//    private func calculateFrame() -> (CGRect , CGSize){
-//        
-//        if pic_urls?.count == 0{
-//            return (CGRectZero, CGSizeZero)
-//        }
-//        
-//        // 计算正文高度
-//        let picsW = UIScreen.mainScreen().bounds.width - CGFloat(2 * cellMargin)
-//        let picsH = picsW
-//        // 文字的最大尺寸
-//        let maxSize = CGSize(width: picsW, height: CGFloat(MAXFLOAT))
-//        // 计算文字的高度
-//        var textH : CGFloat = 0
-//        if text != nil{
-//            textH = (text! as NSString).boundingRectWithSize(maxSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(17)], context: nil).size.height
-//        }else{
-//            textH = 0
-//        }
-//        
-//        // 一张配图
-//        if pic_urls?.count == 1{
-//            // 取出缓存中的image计算size
-//            let image = SDImageCache.sharedImageCache().imageFromDiskCacheForKey(pic_urls?.first!["thumbnail_pic"] as! String)
-//            let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: image.size.width * 2, height: image.size.height * 2)
-//            
-//            return (picRect, CGSize(width: image.size.width * 2, height: image.size.height * 2))
-//        }else if pic_urls?.count == 4{
-//            let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: picsW, height: picsH)
-//            
-//            let itemSize = (picsW - CGFloat(cellMargin)) / 2
-//            
-//            return (picRect, CGSize(width: itemSize, height: itemSize))
-//        }else{
-//            
-//            
-//            let row  = ((pic_urls?.count)! - 1) / 3 + 1
-//            let col  = ((pic_urls?.count)! - 1) % 3 + 1
-//            let itemW = (picsW - CGFloat(2 * cellMargin)) / 3
-//            let itemH = itemW
-//            let picRect : CGRect = CGRect(x: CGFloat(cellMargin), y: CGFloat(iconH + (3 * cellMargin))  + textH, width: CGFloat(col) * itemW + CGFloat((col - 1) * cellMargin), height: CGFloat(row) * itemH + CGFloat((row - 1) * cellMargin))
-//            
-//            return (picRect, CGSize(width: itemW, height: itemH))
-//            
-//        }
-//    }
 }

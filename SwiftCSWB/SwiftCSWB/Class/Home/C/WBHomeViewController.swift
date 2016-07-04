@@ -16,7 +16,12 @@ class WBHomeViewController: WBBaseViewController {
     
     var mainTableView : UITableView?
     
+    var refreshControl : UIRefreshControl?
+    
     var statusArr : [WBStatus]?
+    
+    // 上拉加载更多标记
+    var lastStatus : Bool = false
     
     // titleView
     lazy var titleView : WBNavBarTitleView = {
@@ -41,19 +46,15 @@ class WBHomeViewController: WBBaseViewController {
         let isLogin : Bool = loginRegisterView("visitordiscover_feed_image_house", isPlayground: false)
         
         if isLogin{
-            WBStatus.loadNewStatuses({ (dateArr : [WBStatus]?, error : NSError?) -> () in
-                if error != nil {
-                    print(error)
-                    return
-                }
-                
-                self.statusArr = dateArr
-                
-                // 下载配图(下载完成后刷新表格)
-                self.cachesImages(dateArr)
-            })
+            
+            // 显示下拉刷新图片，仅仅显示，不会调用刷新方法
+            refreshControl?.beginRefreshing()
+            
+            // 加载最新数据
+            loadNewStatus()
         }
     }
+    
     
     // 缓存微博配图
     private func cachesImages(modelArr : [WBStatus]?){
@@ -91,6 +92,9 @@ class WBHomeViewController: WBBaseViewController {
             dispatch_group_notify(group, dispatch_get_main_queue(), { () -> Void in
                 CSprint("图片全部下载完毕")
                 self.mainTableView?.reloadData()
+                
+                // 结束刷新
+                self.refreshControl?.endRefreshing()
             })
         }
     }
@@ -125,12 +129,54 @@ class WBHomeViewController: WBBaseViewController {
         // tableView.registerClass(WBHomeStatusTableViewCell.self, forCellReuseIdentifier: reusedID)
         // xib创建的cell的注册方式
         tableView.registerNib(UINib.init(nibName: "WBHomeStatusTableViewCell", bundle: nil), forCellReuseIdentifier: reusedID)
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
         
+        //添加下啦刷新控件
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "loadNewStatus", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl!)
+        
+        
         mainTableView = tableView
     }
+    
+    // 加载最新微博数据
+    func loadNewStatus(){
+        
+        var since_id : String = statusArr?.first?.idstr ?? "0"
+        var max_id = "0"
+        
+        if lastStatus{
+            max_id = statusArr?.last?.idstr ?? "0"
+            since_id = "0"
+        }
+        
+        
+        WBStatus.loadNewStatuses(max_id, since_id: since_id, finished: { (dateArr : [WBStatus]?, error : NSError?) -> () in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            if since_id == "0" && max_id != "0" {
+                self.statusArr = self.statusArr! + dateArr!
+            }else if since_id != "0" && max_id == "0"{
+                self.statusArr = dateArr! + self.statusArr!
+            }else{
+                self.statusArr = dateArr
+            }
+            
+            // 下载配图(下载完成后刷新表格)
+            self.cachesImages(dateArr)
+            
+            
+        })
+    }
+    
+    
     
     // 注意 事件响应函数不能用private 修饰。因为事件响应是通过runloop监听的，设置私有后runloop找不到该方法
     func btnOnClick(){
@@ -173,6 +219,16 @@ extension WBHomeViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if indexPath.row == (statusArr?.count)! - 1 {
+            lastStatus = true
+            
+            // 上拉刷新
+            loadNewStatus()
+            
+        }else{
+            lastStatus = false
+        }
         
         let cell  = tableView.dequeueReusableCellWithIdentifier(reusedID, forIndexPath: indexPath) as! WBHomeStatusTableViewCell
         

@@ -17,6 +17,9 @@
 		030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */; };
 		0310D29C1CDA1F36002D8124 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D29B1CDA1F36002D8124 /* WBStatus.swift */; };
 		0310D29E1CDA4402002D8124 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310D29D1CDA4402002D8124 /* WBUser.swift */; };
+		0316E95D1D2A39A90050ECE5 /* WBHomeRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0316E95C1D2A39A90050ECE5 /* WBHomeRefreshView.xib */; };
+		0316E95F1D2A39D60050ECE5 /* WBHomeRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E95E1D2A39D60050ECE5 /* WBHomeRefreshView.swift */; };
+		0316E9631D2A88C80050ECE5 /* WBHomePicCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316E9621D2A88C80050ECE5 /* WBHomePicCollection.swift */; };
 		031A58D01CCB4866002E228E /* WBLoginRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */; };
 		031A58D21CCB4898002E228E /* WBLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */; };
 		031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */; };
@@ -79,6 +82,9 @@
 		030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRcodeViewController.swift; sourceTree = "<group>"; };
 		0310D29B1CDA1F36002D8124 /* WBStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		0310D29D1CDA4402002D8124 /* WBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
+		0316E95C1D2A39A90050ECE5 /* WBHomeRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBHomeRefreshView.xib; sourceTree = "<group>"; };
+		0316E95E1D2A39D60050ECE5 /* WBHomeRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeRefreshView.swift; sourceTree = "<group>"; };
+		0316E9621D2A88C80050ECE5 /* WBHomePicCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomePicCollection.swift; sourceTree = "<group>"; };
 		031A58CF1CCB4865002E228E /* WBLoginRegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLoginRegisterView.swift; sourceTree = "<group>"; };
 		031A58D11CCB4898002E228E /* WBLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBLoginRegisterView.xib; sourceTree = "<group>"; };
 		031A58D41CCB53F6002E228E /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
@@ -330,6 +336,9 @@
 				033378981D28F92400703A42 /* WBHomePicCell.xib */,
 				031EB27A1D2945040029A46D /* WBHomeForwordCellBg.xib */,
 				031EB27C1D29459B0029A46D /* WBHomeForwordCellBg.swift */,
+				0316E95C1D2A39A90050ECE5 /* WBHomeRefreshView.xib */,
+				0316E95E1D2A39D60050ECE5 /* WBHomeRefreshView.swift */,
+				0316E9621D2A88C80050ECE5 /* WBHomePicCollection.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -670,6 +679,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0316E95D1D2A39A90050ECE5 /* WBHomeRefreshView.xib in Resources */,
 				03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */,
 				0BBF8F551CC71B17005209F4 /* Assets.xcassets in Resources */,
 				0BAE81961CC85E1C002642DA /* Info.plist in Resources */,
@@ -767,6 +777,7 @@
 				031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */,
 				031EB27D1D29459B0029A46D /* WBHomeForwordCellBg.swift in Sources */,
 				039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */,
+				0316E9631D2A88C80050ECE5 /* WBHomePicCollection.swift in Sources */,
 				03C342BB1D26CA65003205D4 /* NSDate+Calculate.swift in Sources */,
 				0BAE81A21CC86E97002642DA /* WBMessageViewController.swift in Sources */,
 				03C85A541CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift in Sources */,
@@ -780,6 +791,7 @@
 				030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */,
 				0306E3761CD44B840021604C /* WBNetworkTool.swift in Sources */,
 				0310D29C1CDA1F36002D8124 /* WBStatus.swift in Sources */,
+				0316E95F1D2A39D60050ECE5 /* WBHomeRefreshView.swift in Sources */,
 				032450861CD457E700B9C8E8 /* WBOAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

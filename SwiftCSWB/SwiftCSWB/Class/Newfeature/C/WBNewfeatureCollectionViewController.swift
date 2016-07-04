@@ -12,7 +12,6 @@ import UIKit
 // 版本二
 
 private let reuseIdentifier = "Cell"
-private let reuseIdentifier = "masterTemp"
 
 class WBNewfeatureCollectionViewController: UICollectionViewController {
 
