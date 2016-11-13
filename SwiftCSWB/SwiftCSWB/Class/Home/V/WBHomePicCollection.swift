@@ -8,14 +8,57 @@
 
 import UIKit
 
-class WBHomePicCollection: UICollectionView {
+class WBHomePicCollection: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    let reuseID = "picCell"
+    
+    var status : WBStatus? {
+        didSet{
+            reloadData()
+        }
     }
-    */
+    
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        
+        dataSource = self
+        delegate = self
+        
+        backgroundColor = UIColor.whiteColor()
+        scrollEnabled = false
+        registerNib(UINib(nibName: "WBHomePicCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: reuseID)
+        
+    }
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    class func picCollectionView(collectionViewLayout: UICollectionViewLayout) -> WBHomePicCollection{
+        let collectionView : WBHomePicCollection = WBHomePicCollection(frame: CGRectZero, collectionViewLayout: collectionViewLayout)
+        
+        
+        return collectionView
+    }
+
+}
+
+extension WBHomePicCollection {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return status?.pic_urls?.count ?? 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+        let cell : WBHomePicCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath) as! WBHomePicCell
+        
+        let picStr = status?.pic_urls![indexPath.item]["thumbnail_pic"] as? String
+        cell.picUrl = picStr
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 }

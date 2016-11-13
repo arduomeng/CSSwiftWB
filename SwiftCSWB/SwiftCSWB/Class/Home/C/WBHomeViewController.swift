@@ -158,6 +158,10 @@ class WBHomeViewController: WBBaseViewController {
         WBStatus.loadNewStatuses(max_id, since_id: since_id, finished: { (dateArr : [WBStatus]?, error : NSError?) -> () in
             if error != nil {
                 print(error)
+                
+                // 结束刷新
+                self.refreshControl?.endRefreshing()
+                
                 return
             }
             

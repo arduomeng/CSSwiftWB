@@ -8,7 +8,9 @@
 
 import UIKit
 
+@objc
 protocol WBLoginRegisterViewDelegate : NSObjectProtocol {
+    optional
     func WBLoginRegisterViewOnClickLoginBtn()
     func WBLoginRegisterViewOnClickRegisterBtn()
 }
@@ -27,7 +29,12 @@ class WBLoginRegisterView: UIView {
     }
     
     @IBAction func loginBtnOnClick(sender: AnyObject) {
-        delegate?.WBLoginRegisterViewOnClickLoginBtn()
+        if let tempDelegate = delegate {
+            if tempDelegate.respondsToSelector("WBLoginRegisterViewOnClickLoginBtn"){
+                
+                delegate?.WBLoginRegisterViewOnClickLoginBtn!()
+            }
+        }
     }
     
     @IBAction func registerBtnOnClick(sender: AnyObject) {

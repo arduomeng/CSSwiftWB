@@ -50,14 +50,9 @@ class WBHomeStatusTableViewCell: UITableViewCell {
     }()
     
     // 配图collectionView
-    lazy var picCollectionView : UICollectionView = {
-        let collectionView : UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.collectionViewFlowLayout)
+    lazy var picCollectionView : WBHomePicCollection = {
+        let collectionView : WBHomePicCollection = WBHomePicCollection(frame: CGRectZero, collectionViewLayout: self.collectionViewFlowLayout)
         // 布局
-        collectionView.backgroundColor = UIColor.whiteColor()
-        collectionView.dataSource = self
-        collectionView.scrollEnabled = false
-        collectionView.registerNib(UINib(nibName: "WBHomePicCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: self.reuseID)
-        
         self.mainView.addSubview(collectionView)
         
         return collectionView
@@ -133,7 +128,11 @@ class WBHomeStatusTableViewCell: UITableViewCell {
                 picCollectionView.hidden = false
                 picCollectionView.frame = (status?.picF)!
                 collectionViewFlowLayout.itemSize = status!.picItemSize!
-                picCollectionView.reloadData()
+                
+                // 给collectionView传递模型
+                picCollectionView.status = status
+                
+                
             }else{
                 picCollectionView.hidden = true
             }

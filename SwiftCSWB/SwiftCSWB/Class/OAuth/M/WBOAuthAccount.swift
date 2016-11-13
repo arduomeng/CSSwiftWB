@@ -52,7 +52,7 @@ class WBOAuthAccount: NSObject, NSCoding{
         return "\(dict)"
     }
     
-    
+
     
     func encodeWithCoder(aCoder: NSCoder){
         aCoder.encodeObject(access_token, forKey: "access_token")

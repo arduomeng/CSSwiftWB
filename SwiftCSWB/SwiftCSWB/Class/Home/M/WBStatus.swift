@@ -238,6 +238,7 @@ class WBStatus: NSObject{
         }
         WBNetworkTool.shareNetworkOAuthTool().GET(URL, parameters: params, success: { (_, response) -> Void in
             
+            
             if let JSON = response {
                 // 字典数组转模型数组
                 let statusArr : [WBStatus] = WBStatus.dictionaryArrToModelArr(JSON["statuses"]! as! [[String : AnyObject]])
@@ -252,6 +253,7 @@ class WBStatus: NSObject{
         }
     }
     class func dictionaryArrToModelArr(dictArr : [[String : AnyObject]]) -> [WBStatus]{
+        CSprint("----\(dictArr[0])")
         var dateArr = [WBStatus]()
         for dict in dictArr{
             let status : WBStatus = WBStatus.init(dict: dict)

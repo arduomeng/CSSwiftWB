@@ -332,13 +332,13 @@
 				0304942F1CCC6105009A513B /* WBMenuViewController.swift */,
 				0369C0BE1D26712000151016 /* WBHomeStatusTableViewCell.swift */,
 				0369C0BF1D26712000151016 /* WBHomeStatusTableViewCell.xib */,
+				0316E9621D2A88C80050ECE5 /* WBHomePicCollection.swift */,
 				0333789A1D28F98D00703A42 /* WBHomePicCell.swift */,
 				033378981D28F92400703A42 /* WBHomePicCell.xib */,
 				031EB27A1D2945040029A46D /* WBHomeForwordCellBg.xib */,
 				031EB27C1D29459B0029A46D /* WBHomeForwordCellBg.swift */,
 				0316E95C1D2A39A90050ECE5 /* WBHomeRefreshView.xib */,
 				0316E95E1D2A39D60050ECE5 /* WBHomeRefreshView.swift */,
-				0316E9621D2A88C80050ECE5 /* WBHomePicCollection.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
