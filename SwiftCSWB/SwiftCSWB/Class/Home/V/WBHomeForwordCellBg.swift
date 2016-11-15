@@ -16,8 +16,10 @@ class WBHomeForwordCellBg: UIView {
     var status : WBStatus?{
         didSet{
             
-            self.textLabel.text = "@\(status?.user?.screen_name):\(status?.text)"
-            
+            if let text = status?.text {
+                let name = status?.user?.screen_name ?? ""
+                self.textLabel.text = "@" + name + ":" + text
+            }
         }
     }
 }

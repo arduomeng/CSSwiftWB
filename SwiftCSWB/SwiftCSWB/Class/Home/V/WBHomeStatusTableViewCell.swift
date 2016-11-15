@@ -65,7 +65,7 @@ class WBHomeStatusTableViewCell: UITableViewCell {
             // 头像
             if let url = status?.user?.profile_image_url{
                 let urlStr = NSURL(string: url)
-                iconImageView.sd_setImageWithURL(urlStr)
+                 iconImageView.sd_setImageWithURL(urlStr)
             }
             
             // 认证
@@ -154,19 +154,19 @@ class WBHomeStatusTableViewCell: UITableViewCell {
     
 }
 
-extension WBHomeStatusTableViewCell : UICollectionViewDataSource{
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return status?.pic_urls?.count ?? 0
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell : WBHomePicCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath) as! WBHomePicCell
-        
-        let picStr = status?.pic_urls![indexPath.item]["thumbnail_pic"] as? String
-        cell.picUrl = picStr
-        
-        return cell
-    }
-}
+//extension WBHomeStatusTableViewCell : UICollectionViewDataSource{
+//    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+//        return status?.pic_urls?.count ?? 0
+//    }
+//    
+//    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
+//        let cell : WBHomePicCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath) as! WBHomePicCell
+//        
+//        let picStr = status?.pic_urls![indexPath.item]["thumbnail_pic"] as? String
+//        cell.picUrl = picStr
+//        
+//        return cell
+//    }
+//}
 
 

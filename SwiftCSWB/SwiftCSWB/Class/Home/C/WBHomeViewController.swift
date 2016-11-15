@@ -43,6 +43,9 @@ class WBHomeViewController: WBBaseViewController {
         // 监听menuView的dismiss
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didObserverMenuViewDismiss", name: dismissMenuView, object: nil)
         
+        // 监听配图的点击
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showPhotoBrowser:", name: CSShowPhotoBrowserController, object: nil)
+        
         let isLogin : Bool = loginRegisterView("visitordiscover_feed_image_house", isPlayground: false)
         
         if isLogin{
@@ -108,8 +111,24 @@ class WBHomeViewController: WBBaseViewController {
         super.viewWillAppear(animated)
     }
     
-    func didObserverMenuViewDismiss(){
+    // MARK: - 通知监听方法
+    private func didObserverMenuViewDismiss(){
         titleView.selected = !titleView.selected
+    }
+    
+    func showPhotoBrowser(notification : NSNotification){
+        CSprint(notification.userInfo)
+        
+        guard let pics = notification.userInfo!["bmiddle_pic"] else{
+            CSprint("pics nil")
+            return
+        }
+        
+//        let photoBrowserVC = WBPhotoBrowserViewController(picsUrl: pics as! [NSURL], index: notification.userInfo!["index"] as! Int)
+        let photoBrowserVC : WBPhotoBrowserViewController = UIStoryboard(name: "PhotoBrowser", bundle: NSBundle.mainBundle()).instantiateInitialViewController() as! WBPhotoBrowserViewController
+        photoBrowserVC.picsUrl = pics as! [NSURL]
+        photoBrowserVC.index = notification.userInfo!["index"] as! Int
+        presentViewController(photoBrowserVC, animated: true, completion: nil)
     }
     
     func setUpNavBar(){
@@ -141,6 +160,11 @@ class WBHomeViewController: WBBaseViewController {
         
         
         mainTableView = tableView
+        
+        // 自动计算行高，cell布局简单的时候使用
+//        tableView.estimatedRowHeight = 200
+//        tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     // 加载最新微博数据
@@ -213,6 +237,10 @@ class WBHomeViewController: WBBaseViewController {
         presentViewController(QRcodeNavVC, animated: true, completion: nil)
     }
 
+    deinit{
+        // 移除通知
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }
 
 extension WBHomeViewController : UITableViewDataSource, UITableViewDelegate{

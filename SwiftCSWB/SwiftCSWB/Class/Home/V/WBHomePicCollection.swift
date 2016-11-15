@@ -60,5 +60,8 @@ extension WBHomePicCollection {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        let bmiddle_pic = status?.bmiddle_pic
+        // 发送通知给HomeViewController
+        NSNotificationCenter.defaultCenter().postNotificationName(CSShowPhotoBrowserController, object: self, userInfo: ["bmiddle_pic" : bmiddle_pic!, "index" : indexPath.item])
     }
 }

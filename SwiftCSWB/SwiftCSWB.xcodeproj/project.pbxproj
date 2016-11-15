@@ -12,6 +12,7 @@
 		0304F6621CCB827200657D28 /* WBNavBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */; };
 		0306E3761CD44B840021604C /* WBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0306E3751CD44B840021604C /* WBNetworkTool.swift */; };
 		0307CFDC1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */; };
+		030BD91B1DDB4D050059CA30 /* PhotoBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030BD91A1DDB4D050059CA30 /* PhotoBrowser.storyboard */; };
 		030D4D7C1CCCAFF800027511 /* WBTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */; };
 		030D4D7F1CCCB29800027511 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D7E1CCCB29800027511 /* Constant.swift */; };
 		030D4D821CCCB63400027511 /* WBQRcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */; };
@@ -38,6 +39,7 @@
 		03C85A4C1CD4A78500CC1FAA /* WBOAuthAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A4B1CD4A78500CC1FAA /* WBOAuthAccountTool.swift */; };
 		03C85A521CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A511CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift */; };
 		03C85A541CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85A531CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift */; };
+		03F009A01DDA04B2000EA0B8 /* WBPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0099F1DDA04B2000EA0B8 /* WBPhotoBrowserViewController.swift */; };
 		0B1D92791CC9C56F005671B0 /* WBNULLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */; };
 		0BAE81951CC85E1C002642DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE818A1CC85E1C002642DA /* AppDelegate.swift */; };
 		0BAE81961CC85E1C002642DA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BAE818B1CC85E1C002642DA /* Info.plist */; };
@@ -77,6 +79,7 @@
 		0304F6611CCB827200657D28 /* WBNavBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavBarTitleView.swift; sourceTree = "<group>"; };
 		0306E3751CD44B840021604C /* WBNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNetworkTool.swift; sourceTree = "<group>"; };
 		0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRCodeCardViewController.swift; sourceTree = "<group>"; };
+		030BD91A1DDB4D050059CA30 /* PhotoBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoBrowser.storyboard; sourceTree = "<group>"; };
 		030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBTransitioningDelegate.swift; sourceTree = "<group>"; };
 		030D4D7E1CCCB29800027511 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBQRcodeViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		03C85A4B1CD4A78500CC1FAA /* WBOAuthAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBOAuthAccountTool.swift; sourceTree = "<group>"; };
 		03C85A511CD4E7E800CC1FAA /* WBNewfeatureCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewfeatureCollectionViewController.swift; sourceTree = "<group>"; };
 		03C85A531CD4E82D00CC1FAA /* WBNewfeatureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNewfeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		03F0099F1DDA04B2000EA0B8 /* WBPhotoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBPhotoBrowserViewController.swift; sourceTree = "<group>"; };
 		0B1D92781CC9C56F005671B0 /* WBNULLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNULLViewController.swift; sourceTree = "<group>"; };
 		0BAE818A1CC85E1C002642DA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAE818B1CC85E1C002642DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -312,6 +316,8 @@
 				030D4D7B1CCCAFF800027511 /* WBTransitioningDelegate.swift */,
 				030D4D801CCCB63400027511 /* WBQRcodeViewController.swift */,
 				0307CFDB1CCFBB5700BD4E20 /* WBQRCodeCardViewController.swift */,
+				03F0099F1DDA04B2000EA0B8 /* WBPhotoBrowserViewController.swift */,
+				030BD91A1DDB4D050059CA30 /* PhotoBrowser.storyboard */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 			files = (
 				0316E95D1D2A39A90050ECE5 /* WBHomeRefreshView.xib in Resources */,
 				03ADCDA51CCD075E00EA9118 /* Home.storyboard in Resources */,
+				030BD91B1DDB4D050059CA30 /* PhotoBrowser.storyboard in Resources */,
 				0BBF8F551CC71B17005209F4 /* Assets.xcassets in Resources */,
 				0BAE81961CC85E1C002642DA /* Info.plist in Resources */,
 				031EB27B1D2945040029A46D /* WBHomeForwordCellBg.xib in Resources */,
@@ -775,6 +782,7 @@
 				0369C0C01D26712000151016 /* WBHomeStatusTableViewCell.swift in Sources */,
 				032450881CD4580300B9C8E8 /* WBOAuthAccount.swift in Sources */,
 				031A58D51CCB53F6002E228E /* UIBarButtonItem+Category.swift in Sources */,
+				03F009A01DDA04B2000EA0B8 /* WBPhotoBrowserViewController.swift in Sources */,
 				031EB27D1D29459B0029A46D /* WBHomeForwordCellBg.swift in Sources */,
 				039F50471CCC9B1D0061AC81 /* WBAnimatedTransitioning.swift in Sources */,
 				0316E9631D2A88C80050ECE5 /* WBHomePicCollection.swift in Sources */,

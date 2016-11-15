@@ -115,11 +115,43 @@ class WBStatus: NSObject{
     // 转发微博模型
     var forwordStatus : WBStatus?
     
+    // 微博配图大图数组
+    var _bmiddle_pic : [NSURL]?
+    var bmiddle_pic : [NSURL]?{
+        set{
+            _bmiddle_pic = newValue
+        }
+        get{
+            var pic_urls : [[String : AnyObject]]?
+            if (forwordStatus?.pic_urls != nil && forwordStatus?.pic_urls?.count != 0){
+                pic_urls = forwordStatus?.pic_urls
+            }else{
+                pic_urls = _pic_urls
+            }
+            
+            _bmiddle_pic = [NSURL]()
+            
+            // 处理大图数组
+            for dict in pic_urls!{
+                guard var urlStr = dict["thumbnail_pic"] as? String else{
+                    continue
+                }
+                
+                urlStr = urlStr.stringByReplacingOccurrencesOfString("thumbnail", withString: "bmiddle")
+                _bmiddle_pic?.append(NSURL(string: urlStr)!)
+            }
+            
+            return _bmiddle_pic
+        }
+    }
+    
+    
     // 微博配图(若有转发微博显示转发微博的图片，否则显示原创微博的图片)
     var _pic_urls : [[String : AnyObject]]?
     var pic_urls : [[String : AnyObject]]?{
         set{
             _pic_urls = newValue
+            
         }
         get{
             if (forwordStatus?.pic_urls != nil && forwordStatus?.pic_urls?.count != 0){
@@ -129,6 +161,9 @@ class WBStatus: NSObject{
             }
         }
     }
+    
+    
+    
     // 用户模型
     var user : WBUser?
     // cell高度
@@ -253,7 +288,7 @@ class WBStatus: NSObject{
         }
     }
     class func dictionaryArrToModelArr(dictArr : [[String : AnyObject]]) -> [WBStatus]{
-        CSprint("----\(dictArr[0])")
+//        CSprint("----\(dictArr[0])")
         var dateArr = [WBStatus]()
         for dict in dictArr{
             let status : WBStatus = WBStatus.init(dict: dict)

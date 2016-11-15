@@ -33,3 +33,6 @@ func CSprint<T>(message: T, fileName: String = __FILE__, methodName: String = __
         print("\(methodName)[\(lineNumber)]:\(message)")
     #endif
 }
+
+// 通知
+let CSShowPhotoBrowserController = "CSShowPhotoBrowserController"
