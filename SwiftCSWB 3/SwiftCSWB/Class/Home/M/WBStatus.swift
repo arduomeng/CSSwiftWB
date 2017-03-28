@@ -74,9 +74,15 @@ class WBStatus: NSObject{
             
             let dateFormat = DateFormatter()
             dateFormat.dateFormat = "EEE MMM dd HH:mm:ss Z yyyy"
-            let createdDate : Date = dateFormat.date(from: _created_at!)!
+            guard let createdAt = _created_at else {
+                return nil
+            }
+            let createdAtData : Date? = dateFormat.date(from: createdAt)
             let nowDate     = Date()
             
+            guard let createdDate = createdAtData else {
+                return nil
+            }
             // 日历对象（方便比较两个日期之间的差距）
             let calendar : Calendar = Calendar.current
             // 计算两个日期之间的差值
@@ -105,7 +111,7 @@ class WBStatus: NSObject{
                 return dateFormat.string(from: createdDate)
             }
             
-            return _created_at
+            return createdAt
         }
     }
     
@@ -286,7 +292,10 @@ class WBStatus: NSObject{
             self.forwordStatus = status
             return;
         }
-            
+        if key == "bmiddle_pic" {
+            return;
+        }
+        
         super.setValue(value, forKey: key)
     }
     
