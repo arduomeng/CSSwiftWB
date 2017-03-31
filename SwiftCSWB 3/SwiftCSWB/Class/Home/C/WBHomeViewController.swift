@@ -170,9 +170,11 @@ class WBHomeViewController: WBBaseViewController {
     // 加载最新微博数据
     func loadNewStatus(){
         
+        // 下啦
         var since_id : String = statusArr?.first?.idstr ?? "0"
         var max_id = "0"
         
+        // 上啦
         if lastStatus{
             max_id = statusArr?.last?.idstr ?? "0"
             since_id = "0"
@@ -199,8 +201,6 @@ class WBHomeViewController: WBBaseViewController {
             
             // 下载配图(下载完成后刷新表格)
             self.cachesImages(dateArr)
-            
-            
         })
     }
     

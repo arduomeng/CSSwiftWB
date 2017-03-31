@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import FMDB
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -313,26 +314,21 @@ class WBStatus: NSObject{
      - parameter finished: 数据加载完成的回调闭包
      */
     class func loadNewStatuses(_ max_id : String, since_id : String, finished : @escaping (_ dateArr : [WBStatus]?, _ error : Error?) -> ()){
-        let URL = "2/statuses/home_timeline.json"
-        var params = [String : AnyObject]()
-        if let account : WBOAuthAccount? = WBOAuthAccountTool.shareOAuthAccountTool().loadAccount(){
-            params["access_token"] = account?.access_token as AnyObject?
-            params["since_id"] = since_id as AnyObject?
-            params["max_id"] = max_id as AnyObject?
-        }
-        
-        WBNetworkTool.shareNetworkOAuthTool().get(URL, parameters: params, progress: nil, success: { (dataTask, response) in
-            if let JSON = response {
+       
+        WBStatusDAO.loadStatuses(since_id, max_id: max_id) { (JSONArr, error) in
+            if JSONArr != nil {
                 // 字典数组转模型数组
-                let statusArr : [WBStatus] = WBStatus.dictionaryArrToModelArr(((JSON as! [String : AnyObject])["statuses"] as! [[String : AnyObject]]))
+                let statusArr : [WBStatus] = WBStatus.dictionaryArrToModelArr(JSONArr!)
                 
                 // 调用闭包给外部传值
                 finished(statusArr, nil)
+                return
             }
-        }) { (dataTask, error) in
             // 调用闭包给外部传值
             finished(nil, error)
         }
+        
+                
     }
     class func dictionaryArrToModelArr(_ dictArr : [[String : AnyObject]]) -> [WBStatus]{
 //        CSprint("----\(dictArr[0])")

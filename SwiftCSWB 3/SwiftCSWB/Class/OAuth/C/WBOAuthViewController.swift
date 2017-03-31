@@ -95,8 +95,7 @@ extension WBOAuthViewController : UIWebViewDelegate{
         params["access_token"] = JSON["access_token"]
         params["uid"] = JSON["uid"]
         
-        networkOAuth.get(path, parameters: params, success: { (_, userInfoJSON) -> Void in
-    
+        networkOAuth.get(path, parameters: params, progress: nil, success: { (_, userInfoJSON) in
             // 初始化对象
             let OAuthAccount = WBOAuthAccount(dict: accountJSON)
             // 添加需要的个人信息
@@ -110,19 +109,17 @@ extension WBOAuthViewController : UIWebViewDelegate{
             self.dismiss(animated: true, completion: nil)
             // 发送通知，让appdelegate切换控制器
             NotificationCenter.default.post(name: Notification.Name(rawValue: switchViewController), object: nil)
-            
-            
-            
-            }) { (_, error) -> Void in
-                print(error)
+        }) { (_, error) in
+            print(error)
         }
+        
     }
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        SVProgressHUD.showInfo(withStatus: "登录中...", maskType: SVProgressHUDMaskType.black)
+//        SVProgressHUD.showInfo(withStatus: "登录中...")
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        SVProgressHUD.dismiss()
+//        SVProgressHUD.dismiss()
     }
     
     

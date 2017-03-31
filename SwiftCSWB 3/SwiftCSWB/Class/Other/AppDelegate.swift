@@ -28,6 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let path = NSHomeDirectory()
         CSprint(path)
         
+        // 打开数据库
+        WBSqliteManager.shareSqliteManager().openDB("statusDB.sqlite")
+        
+        // 清楚缓存
+        WBStatusDAO.clearCacheData()
+        
         return true;
     }
     
